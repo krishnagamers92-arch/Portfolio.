@@ -1,0 +1,1195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velocity Forge - Digital Excellence</title>
+</head>
+<body>
+
+<!-- ================================================================== -->
+<!-- # CONTENT SECTION - ALL IMAGES, TEXT, AND LINKS AT TOP -->
+<!-- Edit this section ONLY for content changes - NO CSS OR LOGIC HERE -->
+<!-- ================================================================== -->
+
+<script>
+// ===== WEBSITE CONTENT - EDIT THIS SECTION ONLY =====
+const WEBSITE_DATA = {
+    
+    // ===== LOGO AND BRANDING =====
+    // # LOGO SECTION - Direct ImgBB link (use https://i.ibb.co/... format)
+    logo: "https://i.postimg.cc/SsTF11VZ/logo-2-0.png",
+    brandName: "Velocity Forge",
+    tagline: "Your trusted partner for digital excellence",
+    
+    // ===== HERO SECTION =====
+    // # LOCATION IMAGE SECTION - Hero image
+    heroHeadline: "Welcome to Velocity Forge",
+    heroSubheading: "The Meaning of Velocity ForgeVelocity Forge stands for guaranteed, rapid results. Velocity means we move fast to solve your digital problems with quick, professional turnaround times. Forge speaks to our core strength: we use expert coding and design skills to build (or forge) durable, high-quality digital assets for your business. We deliver speed, precision, and professional strength, ensuring your online presence always performs its best.",
+    heroImage: "https://i.postimg.cc/5tp213nN/Gemini-Generated-Image-3l8qpf3l8qpf3l8q.png",
+    
+    // ===== SERVICE CARDS =====
+    serviceCards: [
+        {
+            icon: "📄",
+            title: "Government Documents",
+            description: "Securely manage Aadhaar, PAN, Voter ID, and Certificates",
+            // # LOCATION IMAGE SECTION - Service card image
+            image: "https://i.postimg.cc/j5DVnQ4x/India-Government-01.jpg"
+        },
+        {
+            icon: "📍",
+            title: "Google Maps Listings",
+            description: "Create professional business profiles and shop listings on Google Maps",
+            // # LOCATION IMAGE SECTION - Service card image
+            image: "https://i.postimg.cc/SQ97QYbp/google-maps-neue-funktion.webp"
+        },
+        {
+            icon: "⭐",
+            title: "Reviews & Testimonials",
+            description: "Collect and display authentic customer feedback and reviews",
+            // # LOCATION IMAGE SECTION - Service card image
+            image: "https://images.unsplash.com/photo-1556745753-b2904692b3cd?w=400&h=300&fit=crop"
+        }
+    ],
+    
+    // ===== GALLERY SECTION =====
+    // # PHOTO IMAGE SECTION - Home page gallery
+    galleryPhotos: [
+        { url: "https://i.postimg.cc/WzsMfSWQ/image.png", caption: "Professional Services" },
+        { url: "https://i.postimg.cc/Wzt43khh/image.png", caption: "Client Success" },
+        { url: "https://i.postimg.cc/15q9jPF0/image.png", caption: "Digital Innovation" }
+    ],
+    
+    // ===== PHOTOS PAGE =====
+    // # PHOTO IMAGE SECTION - Photos page gallery
+    photosPageImages: [
+        "https://i.postimg.cc/zGNVw3Qh/image.png",
+        "https://i.postimg.cc/kg7g6z6m/image.png",
+        "https://i.postimg.cc/8C9GH057/image.png",
+        "https://i.postimg.cc/VvF23GY5/image.png",
+        "https://i.postimg.cc/15q9jPF0/image.png",
+        "https://i.postimg.cc/WzsMfSWQ/image.png"
+    ],
+    
+    // ===== VIDEOS SECTION =====
+    // # VIDEO SECTION - YouTube video links and thumbnails
+    videos: [
+        { 
+            title: "Velocity Forge Intro", 
+            youtubeUrl: "https://youtube.com/shorts/hkwvOlvYYRA",
+            thumbnail: "https://img.youtube.com/vi/hkwvOlvYYRA/maxresdefault.jpg"
+        },
+        { 
+            title: "Service Demo", 
+            youtubeUrl: "https://youtube.com/shorts/HpVN0gNAGNU?feature=share",
+            thumbnail: "https://img.youtube.com/vi/HpVN0gNAGNU/hqdefault.jpg"
+        },
+        { 
+            title: "Client Testimonial", 
+            youtubeUrl: "https://youtube.com/shorts/1c4Tyl1EL50",
+            thumbnail: "https://img.youtube.com/vi/1c4Tyl1EL50/maxresdefault.jpg"
+        },
+        { 
+            title: "How It Works", 
+            youtubeUrl: "https://youtube.com/shorts/hxfS1PObNcw",
+            thumbnail: "https://img.youtube.com/vi/hxfS1PObNcw/0.jpg"
+        }
+    ],
+    
+    // ===== BUSINESS LISTINGS =====
+    businessListings: [
+        { 
+            name: "The Golden Fork", 
+            category: "Restaurant", 
+            address: "123 Main St, Bangalore, Karnataka", 
+            phone: "+91-9999-999999", 
+            email: "info@goldenfork.com" 
+        },
+        { 
+            name: "Fashion Hub Store", 
+            category: "Retail", 
+            address: "456 Park Ave, Mumbai, Maharashtra", 
+            phone: "+91-8888-888888", 
+            email: "contact@fashionhub.com" 
+        },
+        { 
+            name: "Pro IT Solutions", 
+            category: "Service Center", 
+            address: "789 Tech Park, Pune, Maharashtra", 
+            phone: "+91-7777-777777", 
+            email: "support@proitsolutions.com" 
+        }
+    ],
+    
+    // ===== DOCUMENT CATEGORIES =====
+    documentCategories: [
+        { icon: "🆔", name: "Aadhaar", description: "Aadhaar cards and related documents" },
+        { icon: "💳", name: "PAN", description: "Permanent Account Number documents" },
+        { icon: "🗳️", name: "Voter ID", description: "Voter identification documents" },
+        { icon: "🎓", name: "Certificates", description: "Educational degrees and certificates" },
+        { icon: "📋", name: "Driving License", description: "Driving license documents" },
+        { icon: "🏠", name: "Property Docs", description: "Property deeds and titles" },
+        { icon: "💼", name: "Employment", description: "Employment and job documents" },
+        { icon: "💉", name: "Health Docs", description: "Medical and health records" },
+        { icon: "📄", name: "Official Forms", description: "Birth, marriage, death certificates" }
+    ],
+    
+    // ===== CUSTOMER REVIEWS =====
+    reviews: [
+        { 
+            name: "Arjun Kumar", 
+            position: "Business Owner", 
+            company: "Tech Startup", 
+            rating: 5, 
+            text: "Outstanding service! Highly professional team and excellent support throughout." 
+        },
+        { 
+            name: "Priya Sharma", 
+            position: "Manager", 
+            company: "Retail Chain", 
+            rating: 5, 
+            text: "Shop visibility increased significantly after using their Google Maps service!" 
+        },
+        { 
+            name: "Rajesh Patel", 
+            position: "Entrepreneur", 
+            company: "E-Commerce", 
+            rating: 5, 
+            text: "Excellent document management system. Very secure and easy to use." 
+        },
+        { 
+            name: "Neha Singh", 
+            position: "HR Manager", 
+            company: "Corporate", 
+            rating: 5, 
+            text: "Professional and innovative solutions. Great experience working with them!" 
+        },
+        { 
+            name: "Vikram Das", 
+            position: "Restaurant Owner", 
+            company: "Golden Fork", 
+            rating: 5, 
+            text: "Helped us get more customers through Google Maps. Highly recommended!" 
+        },
+        { 
+            name: "Pooja Nair", 
+            position: "Consultant", 
+            company: "Services Ltd", 
+            rating: 5, 
+            text: "Reliable, professional, and trustworthy. Best service provider!" 
+        }
+    ],
+    
+    // ===== FOOTER SECTION =====
+    // # FOOTER SECTION - Social media links
+    socialLinks: {
+        instagram: "https://www.instagram.com/velocity_forge/",
+        twitter: "https://x.com/Velocity_Forge",
+        facebook: "https://www.facebook.com/example",
+        whatsapp: "https://wa.me/example"
+    },
+    
+    // ===== COLOR THEME =====
+    colors: {
+        primary: "#0072B1",
+        secondary: "#E7E5E1",
+        background: "#FFFFFF",
+        text: "#212121"
+    }
+};
+</script>
+
+<!-- ================================================================== -->
+<!-- # HEADER SECTION -->
+<!-- ================================================================== -->
+
+<header id="header">
+    <div class="logo">
+        <img id="headerLogo" src="" alt="Logo">
+    </div>
+    <div class="brand-name" id="headerBrand">Velocity Forge</div>
+    <div class="menu-wrapper">
+        <div class="menu-icon" id="menuBtn">⋮</div>
+        <nav class="dropdown-menu" id="navMenu">
+            <a href="#" data-page="home" class="nav-link active">🏠 Home</a>
+            <a href="#" data-page="photos" class="nav-link">📷 Photos</a>
+            <a href="#" data-page="videos" class="nav-link">🎬 Videos</a>
+            <a href="#" data-page="maps" class="nav-link">📍 Google Maps</a>
+            <a href="#" data-page="documents" class="nav-link">📄 Documents</a>
+            <a href="#" data-page="reviews" class="nav-link">⭐ Reviews</a>
+        </nav>
+    </div>
+</header>
+
+<!-- ================================================================== -->
+<!-- # MAIN CONTENT AREA -->
+<!-- ================================================================== -->
+
+<main id="mainContent">
+    
+    <!-- ===== HOME PAGE ===== -->
+    <section id="home" class="page active">
+        
+        <!-- Hero Section -->
+        <div class="hero-section">
+            <div class="hero-image">
+                <img id="heroImage" src="" alt="Hero Image">
+            </div>
+            <div class="hero-content">
+                <h1 id="heroTitle">Welcome to Velocity Forge</h1>
+                <p id="heroSubtitle">Empowering businesses with innovative solutions</p>
+            </div>
+        </div>
+        
+        <!-- Service Cards Section -->
+        <div class="section">
+            <h2>Our Services</h2>
+            <p class="subtitle">Comprehensive solutions for your business needs</p>
+            <div class="service-cards" id="servicesContainer"></div>
+        </div>
+        
+        <!-- Gallery Section -->
+        <div class="section">
+            <h2>Featured Showcase</h2>
+            <div class="gallery" id="homeGalleryContainer"></div>
+        </div>
+    </section>
+    
+    <!-- ===== PHOTOS PAGE ===== -->
+    <section id="photos" class="page">
+        <h2>Professional Gallery</h2>
+        <p class="subtitle">View our professional portfolio</p>
+        <div class="gallery" id="photosGalleryContainer"></div>
+    </section>
+    
+    <!-- ===== VIDEOS PAGE ===== -->
+    <section id="videos" class="page">
+        <h2>Video Demos & Testimonials</h2>
+        <p class="subtitle">Watch our service demonstrations</p>
+        <div class="videos-grid" id="videosContainer"></div>
+    </section>
+    
+    <!-- ===== GOOGLE MAPS PAGE ===== -->
+    <section id="maps" class="page">
+        <h2>Google Maps Business Listings</h2>
+        <p class="subtitle">Example business profiles that can be created</p>
+        <div class="listings-grid" id="listingsContainer"></div>
+    </section>
+    
+    <!-- ===== DOCUMENTS PAGE ===== -->
+    <section id="documents" class="page">
+        <h2>Government Document Management</h2>
+        <p class="subtitle">Organize your important documents by category</p>
+        <div class="docs-grid" id="docsContainer"></div>
+    </section>
+    
+    <!-- ===== REVIEWS PAGE ===== -->
+    <section id="reviews" class="page">
+        <h2>Customer Reviews & Testimonials</h2>
+        <p class="subtitle">See what our clients say about us</p>
+        <div class="reviews-grid" id="reviewsContainer"></div>
+    </section>
+    
+</main>
+
+<!-- ================================================================== -->
+<!-- # FOOTER SECTION -->
+<!-- ================================================================== -->
+
+<footer id="footer">
+    <div class="footer-content">
+        <div class="footer-brand">
+            <strong id="footerBrand">Velocity Forge</strong>
+            <p id="footerTagline">Your trusted partner for digital excellence</p>
+        </div>
+        <div class="footer-links">
+            <a href="#" data-page="home" class="nav-link">Home</a>
+            <a href="#" data-page="photos" class="nav-link">Photos</a>
+            <a href="#" data-page="videos" class="nav-link">Videos</a>
+            <a href="#" data-page="maps" class="nav-link">Maps</a>
+            <a href="#" data-page="documents" class="nav-link">Documents</a>
+            <a href="#" data-page="reviews" class="nav-link">Reviews</a>
+        </div>
+        <div class="social-icons">
+            <a id="instagramLink" href="" target="_blank" class="social-icon" title="Instagram">📷</a>
+            <a id="twitterLink" href="" target="_blank" class="social-icon" title="X">𝕏</a>
+            <a id="facebookLink" href="" target="_blank" class="social-icon" title="Facebook">f</a>
+            <a id="whatsappLink" href="" target="_blank" class="social-icon" title="WhatsApp">💬</a>
+        </div>
+    </div>
+</footer>
+
+<!-- ================================================================== -->
+<!-- # STYLE SECTION (CSS) -->
+<!-- All styling, animations, and responsive design - NO CONTENT HERE -->
+<!-- ================================================================== -->
+
+<style>
+    /* ===== RESET AND BASE ===== */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+        color: #212121;
+        line-height: 1.6;
+        background: linear-gradient(-45deg, #ffffff, #e6f2ff, #f0f4ff, #ffffff);
+        background-size: 400% 400%;
+        animation: gradientAnimation 15s ease infinite;
+        overflow-x: hidden;
+    }
+
+    /* ===== ANIMATED BACKGROUND ===== */
+    @keyframes gradientAnimation {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+
+    /* ===== HEADER STYLES ===== */
+    header {
+        position: sticky;
+        top: 0;
+        background: white;
+        padding: 15px 20px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 1000;
+    }
+
+    .logo img {
+        height: 50px;
+        width: auto;
+        object-fit: contain;
+        cursor: pointer;
+    }
+
+    .brand-name {
+        font-size: 24px;
+        font-weight: bold;
+        color: #0072B1;
+        flex: 1;
+        text-align: center;
+    }
+
+    .menu-wrapper {
+        position: relative;
+    }
+
+    .menu-icon {
+        font-size: 28px;
+        cursor: pointer;
+        color: #0072B1;
+        width: 44px;
+        height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+        user-select: none;
+    }
+
+    .menu-icon:hover {
+        background: #E7E5E1;
+        transform: scale(1.1);
+    }
+
+    .dropdown-menu {
+        position: absolute;
+        top: 50px;
+        right: 0;
+        background: white;
+        border: 1px solid #E7E5E1;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        min-width: 180px;
+        display: none;
+        z-index: 999;
+        overflow: hidden;
+    }
+
+    .dropdown-menu.show {
+        display: block;
+        animation: slideDown 0.2s ease;
+    }
+
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .dropdown-menu a {
+        display: block;
+        padding: 12px 16px;
+        text-decoration: none;
+        color: #212121;
+        border-bottom: 1px solid #E7E5E1;
+        transition: all 0.3s ease;
+    }
+
+    .dropdown-menu a:hover {
+        background: #F5F5F5;
+        color: #0072B1;
+        padding-left: 20px;
+    }
+
+    .dropdown-menu a:last-child {
+        border-bottom: none;
+    }
+
+    .dropdown-menu a.active {
+        background: #0072B1;
+        color: white;
+    }
+
+    /* ===== MAIN CONTENT ===== */
+    main {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        min-height: calc(100vh - 250px);
+    }
+
+    /* ===== PAGE TRANSITIONS ===== */
+    .page {
+        display: none;
+        animation: fadeIn 0.4s ease;
+    }
+
+    .page.active {
+        display: block;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* ===== HERO SECTION ===== */
+    .hero-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        align-items: center;
+        margin-bottom: 60px;
+    }
+
+    .hero-image img {
+        width: 100%;
+        max-width: 400px;
+        border-radius: 12px;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+    }
+
+    .hero-image img:hover {
+        transform: scale(1.03);
+    }
+
+    .hero-content h1 {
+        font-size: 36px;
+        color: #0072B1;
+        margin-bottom: 16px;
+    }
+
+    .hero-content p {
+        font-size: 18px;
+        color: #666;
+        line-height: 1.8;
+    }
+
+    /* ===== SECTIONS ===== */
+    .section {
+        margin: 60px 0;
+    }
+
+    h2 {
+        font-size: 32px;
+        color: #0072B1;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .subtitle {
+        text-align: center;
+        color: #666;
+        margin-bottom: 40px;
+        font-size: 16px;
+    }
+
+    /* ===== SERVICE CARDS ===== */
+    .service-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 24px;
+    }
+
+    .service-card {
+        background: white;
+        border: 1px solid #E7E5E1;
+        border-radius: 12px;
+        padding: 24px;
+        text-align: center;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .service-card:hover {
+        transform: translateY(-8px) scale(1.02);
+        box-shadow: 0 12px 32px rgba(0,114,177,0.2);
+    }
+
+    .service-card .icon {
+        font-size: 48px;
+        margin-bottom: 16px;
+        display: block;
+    }
+
+    .service-card h3 {
+        font-size: 18px;
+        color: #0072B1;
+        margin-bottom: 12px;
+    }
+
+    .service-card p {
+        font-size: 14px;
+        color: #666;
+        line-height: 1.6;
+        margin-bottom: 16px;
+    }
+
+    .service-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-top: 12px;
+    }
+
+    /* ===== GALLERY ===== */
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+    }
+
+    .gallery-item {
+        position: relative;
+        overflow: hidden;
+        border-radius: 8px;
+        cursor: pointer;
+        aspect-ratio: 1;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+    }
+
+    .gallery-item:hover img {
+        transform: scale(1.1);
+    }
+
+    .gallery-caption {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0,114,177,0.9);
+        color: white;
+        padding: 12px;
+        transform: translateY(100%);
+        transition: transform 0.3s ease;
+        text-align: center;
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    .gallery-item:hover .gallery-caption {
+        transform: translateY(0);
+    }
+
+    /* ===== VIDEOS ===== */
+    .videos-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 24px;
+    }
+
+    .video-card {
+        position: relative;
+        overflow: hidden;
+        border-radius: 8px;
+        cursor: pointer;
+        aspect-ratio: 16/9;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+    }
+
+    .video-card:hover {
+        transform: scale(1.05);
+    }
+
+    .video-thumbnail {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: filter 0.3s ease;
+    }
+
+    .video-card:hover .video-thumbnail {
+        filter: brightness(0.7);
+    }
+
+    .play-button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 48px;
+        opacity: 0.9;
+        transition: all 0.3s ease;
+    }
+
+    .video-card:hover .play-button {
+        opacity: 1;
+        font-size: 56px;
+    }
+
+    .video-title {
+        padding: 12px;
+        background: white;
+        font-size: 14px;
+        font-weight: bold;
+        color: #0072B1;
+        text-align: center;
+    }
+
+    /* ===== LISTINGS ===== */
+    .listings-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 24px;
+    }
+
+    .listing-card {
+        background: white;
+        border: 1px solid #E7E5E1;
+        border-radius: 8px;
+        padding: 20px;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .listing-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 20px rgba(0,114,177,0.15);
+    }
+
+    .listing-card h3 {
+        color: #0072B1;
+        font-size: 18px;
+        margin-bottom: 8px;
+    }
+
+    .listing-category {
+        display: inline-block;
+        background: #0072B1;
+        color: white;
+        padding: 4px 12px;
+        border-radius: 4px;
+        font-size: 12px;
+        margin-bottom: 12px;
+    }
+
+    .listing-card p {
+        font-size: 14px;
+        color: #666;
+        margin: 6px 0;
+    }
+
+    .listing-card strong {
+        color: #212121;
+    }
+
+    /* ===== DOCUMENTS ===== */
+    .docs-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+
+    .doc-card {
+        background: white;
+        border: 1px solid #E7E5E1;
+        border-radius: 8px;
+        padding: 20px;
+        text-align: center;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .doc-card:hover {
+        background: #F5F5F5;
+        transform: translateY(-4px);
+        box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+    }
+
+    .doc-icon {
+        font-size: 42px;
+        margin-bottom: 12px;
+        display: block;
+    }
+
+    .doc-card h4 {
+        color: #0072B1;
+        margin-bottom: 8px;
+        font-size: 16px;
+    }
+
+    .doc-card p {
+        font-size: 13px;
+        color: #666;
+    }
+
+    /* ===== REVIEWS ===== */
+    .reviews-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 24px;
+    }
+
+    .review-card {
+        background: white;
+        border: 1px solid #E7E5E1;
+        border-radius: 8px;
+        padding: 20px;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .review-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    }
+
+    .reviewer-name {
+        font-weight: bold;
+        color: #0072B1;
+        font-size: 16px;
+    }
+
+    .reviewer-meta {
+        font-size: 12px;
+        color: #999;
+        margin-top: 4px;
+    }
+
+    .reviewer-stars {
+        color: #FFB800;
+        margin: 8px 0;
+        font-size: 16px;
+    }
+
+    .review-text {
+        font-size: 14px;
+        color: #666;
+        line-height: 1.6;
+        font-style: italic;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+        background: #F5F5F5;
+        border-top: 1px solid #E7E5E1;
+        padding: 24px 20px;
+        margin-top: 60px;
+    }
+
+    .footer-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-brand {
+        font-size: 13px;
+        color: #666;
+    }
+
+    .footer-brand strong {
+        color: #0072B1;
+        font-size: 15px;
+    }
+
+    .footer-brand p {
+        margin-top: 4px;
+    }
+
+    .footer-links {
+        font-size: 12px;
+    }
+
+    .footer-links a {
+        color: #0072B1;
+        text-decoration: none;
+        margin: 0 8px;
+        transition: color 0.3s ease;
+    }
+
+    .footer-links a:hover {
+        color: #005A99;
+        text-decoration: underline;
+    }
+
+    .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+        flex-wrap: wrap;
+    }
+
+    .social-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+        font-size: 20px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        color: #0072B1;
+        border-radius: 50%;
+        background: white;
+    }
+
+    .social-icon:hover {
+        transform: scale(1.2);
+        background: #0072B1;
+        color: white;
+        box-shadow: 0 4px 12px rgba(0,114,177,0.3);
+    }
+
+    /* ===== RESPONSIVE DESIGN ===== */
+    @media (max-width: 768px) {
+        .hero-section {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+
+        .hero-content h1 {
+            font-size: 28px;
+        }
+
+        .hero-content p {
+            font-size: 16px;
+        }
+
+        .brand-name {
+            font-size: 18px;
+        }
+
+        h2 {
+            font-size: 24px;
+        }
+
+        .service-cards,
+        .gallery,
+        .videos-grid,
+        .listings-grid,
+        .docs-grid,
+        .reviews-grid {
+            grid-template-columns: 1fr;
+        }
+
+        main {
+            padding: 30px 15px;
+        }
+
+        .dropdown-menu {
+            min-width: 160px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        header {
+            padding: 12px 15px;
+        }
+
+        .hero-content h1 {
+            font-size: 22px;
+        }
+
+        .brand-name {
+            font-size: 16px;
+        }
+
+        h2 {
+            font-size: 20px;
+        }
+
+        main {
+            padding: 20px 10px;
+        }
+
+        .menu-icon {
+            width: 40px;
+            height: 40px;
+        }
+
+        .footer-content {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+
+<!-- ================================================================== -->
+<!-- # SCRIPT SECTION (ANIMATIONS + LOGIC) -->
+<!-- All JavaScript functionality - NO CONTENT EDITING HERE -->
+<!-- ================================================================== -->
+
+<script>
+    // ===== INITIALIZE WEBSITE =====
+    function initializeWebsite() {
+        // Set logo and branding
+        document.getElementById('headerLogo').src = WEBSITE_DATA.logo;
+        document.getElementById('headerBrand').textContent = WEBSITE_DATA.brandName;
+        document.getElementById('footerBrand').textContent = WEBSITE_DATA.brandName;
+        document.getElementById('footerTagline').textContent = WEBSITE_DATA.tagline;
+        
+        // Set hero section
+        document.getElementById('heroImage').src = WEBSITE_DATA.heroImage;
+        document.getElementById('heroTitle').textContent = WEBSITE_DATA.heroHeadline;
+        document.getElementById('heroSubtitle').textContent = WEBSITE_DATA.heroSubheading;
+        
+        // Set social media links
+        document.getElementById('instagramLink').href = WEBSITE_DATA.socialLinks.instagram;
+        document.getElementById('twitterLink').href = WEBSITE_DATA.socialLinks.twitter;
+        document.getElementById('facebookLink').href = WEBSITE_DATA.socialLinks.facebook;
+        document.getElementById('whatsappLink').href = WEBSITE_DATA.socialLinks.whatsapp;
+        
+        // Render all content
+        renderServiceCards();
+        renderHomeGallery();
+        renderPhotosGallery();
+        renderVideos();
+        renderListings();
+        renderDocuments();
+        renderReviews();
+        
+        // Initialize analytics
+        initAnalytics();
+    }
+
+    // ===== RENDER FUNCTIONS =====
+    function renderServiceCards() {
+        const html = WEBSITE_DATA.serviceCards.map(card => `
+            <div class="service-card">
+                <span class="icon">${card.icon}</span>
+                <h3>${card.title}</h3>
+                <p>${card.description}</p>
+                <img src="${card.image}" alt="${card.title}">
+            </div>
+        `).join('');
+        document.getElementById('servicesContainer').innerHTML = html;
+    }
+
+    function renderHomeGallery() {
+        const html = WEBSITE_DATA.galleryPhotos.map(photo => `
+            <div class="gallery-item" onclick="trackClick(); window.open('${WEBSITE_DATA.socialLinks.instagram}', '_blank')">
+                <img src="${photo.url}" alt="${photo.caption}">
+                <div class="gallery-caption">${photo.caption}</div>
+            </div>
+        `).join('');
+        document.getElementById('homeGalleryContainer').innerHTML = html;
+    }
+
+    function renderPhotosGallery() {
+        const html = WEBSITE_DATA.photosPageImages.map((url, index) => `
+            <div class="gallery-item" onclick="trackClick(); window.open('${WEBSITE_DATA.socialLinks.instagram}', '_blank')">
+                <img src="${url}" alt="Photo ${index + 1}">
+                <div class="gallery-caption">View on Instagram</div>
+            </div>
+        `).join('');
+        document.getElementById('photosGalleryContainer').innerHTML = html;
+    }
+
+    function renderVideos() {
+        const html = WEBSITE_DATA.videos.map(video => `
+            <div>
+                <div class="video-card" onclick="trackClick(); window.open('${video.youtubeUrl}', '_blank')">
+                    <img src="${video.thumbnail}" alt="${video.title}" class="video-thumbnail">
+                    <div class="play-button">▶️</div>
+                </div>
+                <div class="video-title">${video.title}</div>
+            </div>
+        `).join('');
+        document.getElementById('videosContainer').innerHTML = html;
+    }
+
+    function renderListings() {
+        const html = WEBSITE_DATA.businessListings.map(listing => `
+            <div class="listing-card">
+                <h3>${listing.name}</h3>
+                <div class="listing-category">${listing.category}</div>
+                <p><strong>📍 Address:</strong> ${listing.address}</p>
+                <p><strong>📞 Phone:</strong> ${listing.phone}</p>
+                <p><strong>✉️ Email:</strong> ${listing.email}</p>
+            </div>
+        `).join('');
+        document.getElementById('listingsContainer').innerHTML = html;
+    }
+
+    function renderDocuments() {
+        const html = WEBSITE_DATA.documentCategories.map(doc => `
+            <div class="doc-card">
+                <span class="doc-icon">${doc.icon}</span>
+                <h4>${doc.name}</h4>
+                <p>${doc.description}</p>
+            </div>
+        `).join('');
+        document.getElementById('docsContainer').innerHTML = html;
+    }
+
+    function renderReviews() {
+        const html = WEBSITE_DATA.reviews.map(review => `
+            <div class="review-card">
+                <div class="reviewer-name">${review.name}</div>
+                <div class="reviewer-meta">${review.position} at ${review.company}</div>
+                <div class="reviewer-stars">${'⭐'.repeat(review.rating)}</div>
+                <p class="review-text">"${review.text}"</p>
+            </div>
+        `).join('');
+        document.getElementById('reviewsContainer').innerHTML = html;
+    }
+
+    // ===== PAGE NAVIGATION =====
+    function navigateToPage(pageName) {
+        // Hide all pages
+        document.querySelectorAll('.page').forEach(page => {
+            page.classList.remove('active');
+        });
+        
+        // Show selected page
+        document.getElementById(pageName).classList.add('active');
+        
+        // Update active nav links
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.classList.remove('active');
+        });
+        document.querySelectorAll(`[data-page="${pageName}"]`).forEach(link => {
+            link.classList.add('active');
+        });
+        
+        // Close dropdown menu
+        document.getElementById('navMenu').classList.remove('show');
+        
+        // Scroll to top
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        
+        // Track page view
+        trackPageView(pageName);
+    }
+
+    // ===== ANALYTICS =====
+    function initAnalytics() {
+        if (!localStorage.getItem('velocity_forge_analytics')) {
+            localStorage.setItem('velocity_forge_analytics', JSON.stringify({
+                pageViews: {},
+                totalClicks: 0,
+                lastUpdated: new Date().toISOString()
+            }));
+        }
+        trackPageView('home');
+        setInterval(updateAnalytics, 60000);
+    }
+
+    function trackPageView(pageName) {
+        const data = JSON.parse(localStorage.getItem('velocity_forge_analytics'));
+        data.pageViews[pageName] = (data.pageViews[pageName] || 0) + 1;
+        data.lastUpdated = new Date().toISOString();
+        localStorage.setItem('velocity_forge_analytics', JSON.stringify(data));
+    }
+
+    function trackClick() {
+        const data = JSON.parse(localStorage.getItem('velocity_forge_analytics'));
+        data.totalClicks++;
+        data.lastUpdated = new Date().toISOString();
+        localStorage.setItem('velocity_forge_analytics', JSON.stringify(data));
+    }
+
+    function updateAnalytics() {
+        const data = JSON.parse(localStorage.getItem('velocity_forge_analytics'));
+        const totalViews = Object.values(data.pageViews).reduce((a, b) => a + b, 0);
+        console.log('📊 Analytics Update:', {
+            totalPageViews: totalViews,
+            totalClicks: data.totalClicks,
+            lastUpdated: data.lastUpdated
+        });
+    }
+
+    // ===== EVENT LISTENERS =====
+    document.addEventListener('DOMContentLoaded', function() {
+        initializeWebsite();
+        
+        // Menu toggle
+        document.getElementById('menuBtn').addEventListener('click', function(e) {
+            e.stopPropagation();
+            document.getElementById('navMenu').classList.toggle('show');
+            trackClick();
+        });
+        
+        // Navigation links
+        document.querySelectorAll('[data-page]').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                navigateToPage(this.getAttribute('data-page'));
+                trackClick();
+            });
+        });
+        
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('.menu-wrapper')) {
+                document.getElementById('navMenu').classList.remove('show');
+            }
+        });
+        
+        // Track clicks on social links
+        document.querySelectorAll('.social-icon').forEach(link => {
+            link.addEventListener('click', trackClick);
+        });
+    });
+</script>
+
+</body>
+</html>
